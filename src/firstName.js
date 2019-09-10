@@ -1,37 +1,124 @@
-var randomInArray = require('./randomInArray');
-var sex = require('./sex');
-var sexes = require('./sexes');
+var randomInArray = require("./randomInArray");
+var sex = require("./sex");
+var sexes = require("./sexes");
 
 module.exports = function(inputSex) {
-  'use strict';
+  "use strict";
 
   // Equal number of male and female common first names
   var firstNames = {
     male: [
-      'Aaron', 'Aiden', 'Alexander', 'Andrew', 'Anthony', 'Benjamin', 'Brandon',
-      'Brayden', 'Caleb', 'Carter', 'Christian', 'Christopher', 'Daniel',
-      'David', 'Dylan', 'Elijah', 'Ethan', 'Evan', 'Gabriel', 'Gavin', 'Isaac',
-      'Isaiah', 'Jack', 'Jackson', 'Jacob', 'James', 'Jayden', 'John',
-      'Jonathan', 'Jordan', 'Joseph', 'Joshua', 'Julian', 'Landon', 'Liam',
-      'Logan', 'Lucas', 'Luke', 'Mason', 'Matthew', 'Michael', 'Nathan',
-      'Nicholas', 'Noah', 'Owen', 'Ryan', 'Samuel', 'Tyler', 'William', 'Wyatt'
+      "Anton",
+      "August",
+      "Alexander",
+      "Andre",
+      "Armin",
+      "Benjamin",
+      "Bernhard",
+      "Burkhard",
+      "Christoff",
+      "Christian",
+      "Christopher",
+      "Daniel",
+      "David",
+      "Dominik",
+      "Erik",
+      "Emil",
+      "Enrico",
+      "Gabriel",
+      "Gustav",
+      "Isaac",
+      "Ilias",
+      "Josef",
+      "Jan",
+      "Jacob",
+      "James",
+      "Jens",
+      "John",
+      "Jonathan",
+      "Jochen",
+      "Joseph",
+      "Joshua",
+      "Julian",
+      "Loan",
+      "Liam",
+      "Lennart",
+      "Lucas",
+      "Lukas",
+      "Matthias",
+      "Matthew",
+      "Michael",
+      "Norbert",
+      "Nicholas",
+      "Ortwin",
+      "Robert",
+      "Samuel",
+      "Sven",
+      "Tobias",
+      "Thomas",
+      "William",
+      "Wolfgang"
     ],
     female: [
-      'Aaliyah', 'Abigail', 'Addison', 'Alexis', 'Allison', 'Alyssa', 'Amelia',
-      'Anna', 'Ashley', 'Aubrey', 'Audrey', 'Ava', 'Avery', 'Brianna',
-      'Brooklyn', 'Camila', 'Charlotte', 'Chloe', 'Claire', 'Elizabeth', 'Ella',
-      'Emily', 'Emma', 'Evelyn', 'Gabriella', 'Grace', 'Hailey', 'Hannah',
-      'Isabella', 'Kaylee', 'Khloe', 'Layla', 'Leah', 'Lillian', 'Lily',
-      'Madison', 'Mia', 'Natalie', 'Nevaeh', 'Olivia', 'Riley', 'Samantha',
-      'Sarah', 'Savannah', 'Sofia', 'Sophia', 'Taylor', 'Victoria', 'Zoe',
-      'Zoey'
+      "Anna",
+      "Anne",
+      "Ava",
+      "Anneliese",
+      "Antonia",
+      "Alyssa",
+      "Amalia",
+      "Aurora",
+      "Amelie",
+      "Alexandra",
+      "Audrey",
+      "Amanda",
+      "Anna-Lene",
+      "Brigitte",
+      "Berta",
+      "Camila",
+      "Charlotte",
+      "Caroline",
+      "Cordula",
+      "Elizabeth",
+      "Ella",
+      "Emilie",
+      "Emma",
+      "Evelyn",
+      "Gabriella",
+      "Gertrud",
+      "Hanna",
+      "Hannah",
+      "Isabella",
+      "Karin",
+      "Kerstin",
+      "Layla",
+      "Leah",
+      "Lillian",
+      "Lotte",
+      "Laura",
+      "Lena",
+      "Magdalena",
+      "Mia",
+      "Natalie",
+      "Nora",
+      "Olivia",
+      "Ruth",
+      "Samantha",
+      "Sarah",
+      "Sonja",
+      "Sofia",
+      "Sophia",
+      "Traudel",
+      "Victoria",
+      "Zoe",
+      "Zoey"
     ]
   };
 
   inputSex = inputSex || sex();
 
   if (sexes.indexOf(inputSex) === -1) {
-    throw new Error(inputSex + ' is not a valid sex.');
+    throw new Error(inputSex + " is not a valid sex.");
   }
 
   return randomInArray(firstNames[inputSex]);
